@@ -80,7 +80,7 @@ This project was developed to enable real-time Simultaneous Localization and Map
 ## Demonstration Video
 
 **Real-Time SLAM and Visualization with Husky A200**  
-[![Real-Time SLAM and Visualization with Husky A200]](https://www.youtube.com/watch?v=XPt2Usu19GQ)
+[![Real-Time SLAM and Visualization with Husky A200](https://img.youtube.com/vi/XPt2Usu19GQ/hqdefault.jpg)](https://www.youtube.com/watch?v=XPt2Usu19GQ)
 
 This video demonstrates the Husky A200 robot performing real-time SLAM using Gmapping with an RPLIDAR A3 sensor. The ZED 2i camera provides an RGB view and point cloud, visualized in RViz alongside the generated map and robot model as the robot navigates the environment.
 
