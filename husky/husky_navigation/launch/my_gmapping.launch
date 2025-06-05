@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Ensure the RPLIDAR node is running -->
+  <!-- <include file="$(find rplidar_ros)/launch/rplidar_a3.launch"/> -->
+
+  <!-- Load the URDF and start robot_state_publisher for TF transforms -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find husky_description)/urdf/husky.urdf.xacro"/>
+  <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
+
+  <!-- Remap /odometry/filtered to /odom -->
+  <remap from="/odometry/filtered" to="/odom"/>
+
+  <!-- Start Gmapping -->
+  <include file="$(find husky_navigation)/launch/gmapping.launch">
+    <arg name="scan_topic" value="/scan"/>
+  </include>
+
+  <!-- Start Move Base -->
+  <include file="$(find husky_navigation)/launch/move_base.launch"/>
+
+  <!-- Start RViz -->
+  <include file="$(find husky_viz)/launch/view_robot.launch"/>
+</launch>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find rplidar_ros)/launch/rplidar_a3.launch" />
+
+  <!-- Load the URDF into the robot_description parameter -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find husky_description)/urdf/husky.urdf.xacro"/>
+
+  <!-- Start robot_state_publisher to publish the TF tree -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find husky_viz)/rviz/robot.rviz" output="screen"/>
+</launch>
