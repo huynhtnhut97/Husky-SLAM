@@ -83,25 +83,13 @@ This project was developed to enable real-time Simultaneous Localization and Map
   - `launch/my_gmapping.launch`: Launch file to start SLAM, sensor publishing, and visualization.
   - `rviz/my_gmapping.rviz`: RViz configuration for visualizing the map, camera view, point cloud, and robot model.
   - `husky.urdf`: Generated URDF file for the Husky A200 (optional, for reference).
-- `src/husky/`: Modified version of the Husky ROS packages (see below for details).
+- `src/husky/`: Modified version of the Husky ROS packages.
 
-## Notes on the `husky` Package
 
-- This repository includes a modified version of the `husky` package, originally developed by Clearpath Robotics (https://github.com/husky/husky). Modifications include:
-  - Updated `husky_description/urdf/husky.urdf.xacro` to add mounts for RPLIDAR A3 (positioned at x=0.2206, y=0.0, z=0.3) and ZED 2i camera (positioned at x=0.3, y=0.0, z=0.5).
-  - Adjusted `husky_navigation/launch/gmapping.launch` for compatibility with RPLIDAR A3 (e.g., updated scan topic and parameters).
-- The `husky` package is licensed under the BSD-3-Clause license. The original license and copyright notice from Clearpath Robotics are preserved in the `husky/LICENSE` file.
 
-## Acknowledgments
 
-- **ZED ROS Wrapper**: [Stereolabs](https://github.com/stereolabs/zed-ros-wrapper)
-- **RPLIDAR ROS Package**: [Slamtec](https://github.com/Slamtec/rplidar_ros)
-- **Husky ROS Packages**: [Clearpath Robotics](https://github.com/husky/husky)
 
 ## License
 
 This project is licensed under the BSD-3-Clause license, except for the `husky` package, which retains its original BSD-3-Clause license from Clearpath Robotics (see `husky/LICENSE` for details).
 
-## Contact
-
-For questions or issues, please open an issue on this repository or contact <your-email@example.com>.
